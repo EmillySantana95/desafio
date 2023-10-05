@@ -1,0 +1,22 @@
+{
+  "name": "desafio",
+  "version": "1.0.0",
+  "description": "Desafio para curso de Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/automacaodetestes2023/desafio.git"
+  },
+  "author": "André Narita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/automacaodetestes2023/desafio/issues"
+  },
+  "homepage": "https://github.com/automacaodetestes2023/desafio#readme",
+  "dependencies": {
+    "cypress": "^13.3.0"
+  }
+}
