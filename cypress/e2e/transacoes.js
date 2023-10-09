@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
-describe('Cadastro de Transações', () => {
+describe('Validar Transações', () => {
 
-	it('Deve cadastrar uma transação com valor 100,00 e validar a linha na tabela informações da transação', () => {
+	it('Deve inserir transação de RS 100,00 validando a linha incluída', () => {
 		cy.visit('https://devfinance-agilizei.netlify.app/#')
 		cy.get('a[class="button new"]').should('be.visible').click()
 
@@ -17,7 +17,7 @@ describe('Cadastro de Transações', () => {
 		cy.get('tr[data-index="0"] > td').eq(2).should('be.visible').and('have.text', '10/08/2024')
 	})
 
-	it('Deve cadastrar uma transação com valor positivo (Salario mês 5000,00) e uma com valor negativo (Parcela carro 1500,00) e validar valor total', () => {
+	it('Deve inserir transação de salario R$ 5000,00 e carro -1500,00 validando as linhas e blocos', () => {
 		cy.visit('https://devfinance-agilizei.netlify.app/#')
 		cy.get('a[class="button new"]').click()
 
@@ -48,7 +48,7 @@ describe('Cadastro de Transações', () => {
 		cy.get('p[id="totalDisplay"]').should('have.text', 'R$\u00a02.500,00')
 	})
 
-	it('Deve inserir 2 transações quaisquer (Salario mês e VR) após, excluir a transação VR', () => {
+	it('Deve inserir 2 transações salario, VR e excluir a transação VR', () => {
 		cy.visit('https://devfinance-agilizei.netlify.app/#')
 		cy.get('a[class="button new"]').click()
 
@@ -77,7 +77,7 @@ describe('Cadastro de Transações', () => {
 		cy.get('tr[data-index="1"] > td > img').click().should('not.exist')
 	})
 
-	it('Deve cadastrar uma transação com valor 100,00 e validar os blocos de entrada, saída e valor total', () => {
+	it('Deve inserir transação de R$ 100,00 validando os blocos, entradas, saídas e total', () => {
 		cy.visit('https://devfinance-agilizei.netlify.app/#')
 		cy.get('a[class="button new"]').should('be.visible').click()
 
@@ -92,7 +92,7 @@ describe('Cadastro de Transações', () => {
 		cy.get('p[id="totalDisplay"]').should('have.text', 'R$\u00a0100,00')
 	})
 
-	it('Deve cadastrar uma transação com valor -100,00 e validar os blocos de entrada, saída e valor total', () => {
+	it('Deve inserir transação de R$ -100,00 validando os blocos, entradas, saídas e total', () => {
 		cy.visit('https://devfinance-agilizei.netlify.app/#')
 		cy.get('a[class="button new"]').should('be.visible').click()
 
@@ -107,7 +107,7 @@ describe('Cadastro de Transações', () => {
 		cy.get('p[id="totalDisplay"]').should('have.text', '-R$ 100,00')
 	})
 
-	it('Deve cadastrar uma transação com valor -100,00 e validar a linha na tabela informações da transação', () => {
+	it('Deve inserir transação de R$ -100,00 valiando a linha incluída', () => {
 		cy.visit('https://devfinance-agilizei.netlify.app/#')
 		cy.get('a[class="button new"]').click()
 

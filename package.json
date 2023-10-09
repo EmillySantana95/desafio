@@ -4,7 +4,7 @@
   "description": "Desafio para curso de Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "testes": "cypress run --headless --browser chrome"
   },
   "repository": {
     "type": "git",
